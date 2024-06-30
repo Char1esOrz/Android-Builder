@@ -1,0 +1,13 @@
+[
+    "kernelSource": {
+      "name": "oneplus5",       // 你喜欢的名称，无任何影响，一般设定为 设备名字+编译工具 链版本
+      "repo": "https://github.com/crdroidandroid/android_kernel_oneplus_msm8998",       // 内核源码的仓库地址
+      "branch": "14.0",     // 对应内核源码仓库的 分支 名称
+      "device": "oneplus5",     // 对应的设备编号
+      "defconfig": "vendor/lineage_oneplus5_defconfig"   // 对应的 defconfig 文件相对路径
+    },
+    "AnyKernel3": {
+      "use": true,
+      "release": true
+    }
+]
