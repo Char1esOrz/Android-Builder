@@ -19,7 +19,11 @@ jobs:
       # This action checks-out your CONFIGSitory under $GITHUB_WORKSPACE, so your workflow can access it.
       - name: 😄 Checkout
         uses: actions/checkout@v4
-
+        
+      - name: Set NR_CPUS value
+        run: |
+            sed -i 's/#define NR_CPUS .*/#define NR_CPUS 64/' arch/arm64/include/asm/param.h
+            
       # Match the configuration files in the CONFIGS directory, read the contents and merge them into an array.
       - name: 😆 Generate Matrix
         id: generate-matrix
